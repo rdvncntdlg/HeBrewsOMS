@@ -10,7 +10,7 @@ export default function Sidebar({ children }) {
   return (
     <aside className="h-screen">
       <nav className="h-full flex flex-col bg-custom-black border-r shadow-xl">
-        <div className="p-6 pb-20 flex justify-between items-center">
+        <div className="p-6 pb-10 flex justify-between items-center">
           <img
             src="src/assets/images/logo.png"
             className={`overflow-hidden transition-all ${
@@ -61,7 +61,7 @@ export function SidebarItem({ icon, text, active, alert, to }) {
         <Link to={to} className="text-white"> {/* Add the Link component here */}
       <li
         className={`
-          relative flex items-center py-4 mb-4 px-6 my-1
+          relative flex items-center py-4 mb-2 px-6 my-1
           font-bold rounded-3xl cursor-pointer
           transition-colors group
           ${
