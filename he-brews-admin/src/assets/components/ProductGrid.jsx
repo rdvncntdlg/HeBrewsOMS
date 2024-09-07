@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ProductCard from './ProductCard';
 
 // Sample products data
@@ -18,10 +18,10 @@ function ProductGrid({ selectedCategory }) {
     : products;
 
   return (
-    <div className="flex flex-col mt-2 ml-6 max-w-full w-[902px]">
-      <div className="shrink-0 self-center max-w-full h-px border border-black border-solid w-[762px]" />
-      <div className="mt-16 max-md:mt-10 max-md:max-w-full">
-        <div className="flex flex-wrap gap-5 justify-start">
+    <div className="flex flex-col mt-2 mx-6 max-w-full lg:max-w-[100%] gap-5">
+      <div className="shrink-0 self-center max-w-full h-px border border-black border-solid w-full lg:w-[762px]" />
+      <div className="mt-16 max-md:mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
           {filteredProducts.map((product, index) => (
             <ProductCard key={index} {...product} />
           ))}
