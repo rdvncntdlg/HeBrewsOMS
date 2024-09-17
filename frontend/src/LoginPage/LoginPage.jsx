@@ -1,78 +1,26 @@
 import React from 'react';
-import Logo from './Logo';
 import LoginForm from './LoginForm';
+import Logo from './Logo';
 
 function LoginPage() {
   return (
-    <div className="login-page">
-      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3d65d0260250ff3a3617d23644e59963c0d1780d4632f2a7a4b5a008b07c3e7?placeholderIfAbsent=true&apiKey=f5640191d60f45f28ab9a480644a186e" alt="" className="background-image" />
-      <main className="login-container">
-        <div className="login-content">
-          <section className="logo-section">
-            <Logo />
-          </section>
-          <section className="form-section">
-            <LoginForm />
-          </section>
+    <main className="flex relative flex-col min-h-[1024px]">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/290d48176944c328e6fdaaa945b585e858a708bb3d80772fb1461ba4e00377ea?placeholderIfAbsent=true&apiKey=35c7d1a044fe488b9b8cf5e5a4a5bccb" alt="" className="object-cover absolute inset-0 size-full" />
+      <section className="flex relative flex-col justify-center items-center px-16 py-44 w-full bg-neutral-950 bg-opacity-70 max-md:px-5 max-md:py-24 max-md:max-w-full">
+        <div className="pr-14 -mb-9 max-w-full rounded-3xl bg-neutral-100 shadow-[6px_12px_14px_rgba(0,0,0,0.25)] w-[1008px] max-md:pr-5 max-md:mb-2.5">
+          <div className="flex gap-5 max-md:flex-col">
+            <div className="flex flex-col w-[58%] max-md:ml-0 max-md:w-full">
+              <div className="flex flex-col grow justify-center items-center px-20 py-56 w-full rounded-3xl bg-neutral-950 max-md:px-5 max-md:py-24 max-md:mt-10 max-md:max-w-full">
+                <Logo />
+              </div>
+            </div>
+            <div className="flex flex-col ml-5 w-[42%] max-md:ml-0 max-md:w-full">
+              <LoginForm />
+            </div>
+          </div>
         </div>
-      </main>
-      <style jsx>{`
-        .login-page {
-          background-color: #fff;
-          display: flex;
-          flex-direction: column;
-          overflow: hidden;
-          min-height: 100vh;
-        }
-        .background-image {
-          position: absolute;
-          inset: 0;
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          object-position: center;
-        }
-        .login-container {
-          position: relative;
-          background-color: rgba(12, 12, 12, 0.7);
-          display: flex;
-          width: 100%;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding: 178px 70px;
-          min-height: 100vh;
-        }
-        .login-content {
-          border-radius: 20px;
-          background-color: #f6f6f6;
-          box-shadow: 6px 12px 14px rgba(0, 0, 0, 0.25);
-          width: 1008px;
-          max-width: 100%;
-          display: flex;
-        }
-        .logo-section {
-          flex: 0 0 58%;
-        }
-        .form-section {
-          flex: 0 0 42%;
-          padding: 40px;
-        }
-        @media (max-width: 991px) {
-          .login-container {
-            padding: 100px 20px;
-          }
-          .login-content {
-            flex-direction: column;
-          }
-          .logo-section,
-          .form-section {
-            flex: 1 1 auto;
-            width: 100%;
-          }
-        }
-      `}</style>
-    </div>
+      </section>
+    </main>
   );
 }
 
